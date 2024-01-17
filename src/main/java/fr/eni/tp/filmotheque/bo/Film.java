@@ -92,7 +92,9 @@ public class Film {
         sb.append("- 📖 Synopsis : ").append(synopsis).append("\n");
         sb.append("- 📅 Annee : ").append(annee).append("\n");
         sb.append("- ⏱ Duree : ").append(convertMinutesToHoursAndMinutes(duree)).append("\n");
-        sb.append("- 🎥 Realisateur : ").append(realisateur).append("\n");
+        sb.append("- 🎥 Realisateur : ").append(realisateur);
+        if(this.acteurs.contains(this.realisateur)) sb.append(" (Aussi acteur)");
+        sb.append("\n");
         sb.append("- 🌟 Acteurs : ").append(acteurs.toString()).append("\n");
         sb.append("- 📝 Avis : ").append(avis.toString()).append("\n");
         sb.append("- 🎭 Genre : ").append(genre).append("\n");
