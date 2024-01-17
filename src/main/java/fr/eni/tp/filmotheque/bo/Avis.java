@@ -1,5 +1,7 @@
 package fr.eni.tp.filmotheque.bo;
 
+import java.util.Objects;
+
 public class Avis {
     long id;
     int note;
@@ -58,4 +60,16 @@ public class Avis {
         return sb.toString();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Avis avis = (Avis) o;
+        return id == avis.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }

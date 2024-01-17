@@ -1,5 +1,7 @@
 package fr.eni.tp.filmotheque.bo;
 
+import java.util.Objects;
+
 public abstract class Personne {
     long id;
     String nom, prenom;
@@ -42,5 +44,18 @@ public abstract class Personne {
     public String toString() {
         final StringBuffer sb = new StringBuffer(prenom).append(" ").append(nom);
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Personne personne = (Personne) o;
+        return id == personne.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

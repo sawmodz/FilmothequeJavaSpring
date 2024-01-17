@@ -1,6 +1,7 @@
 package fr.eni.tp.filmotheque.bo;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Film {
     long id;
@@ -124,6 +125,19 @@ public class Film {
         result.append("⭐".repeat(Math.max(0, round)));
 
         return result.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Film film = (Film) o;
+        return id == film.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
 
