@@ -87,15 +87,15 @@ public class Film {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Film(").append(id).append(")").append("\n");
-        sb.append("- Titre : ").append(titre).append("\n");
-        sb.append("- Synopsis : ").append(synopsis).append("\n");
-        sb.append("- Annee : ").append(annee).append("\n");
-        sb.append("- Duree : ").append(convertMinutesToHoursAndMinutes(duree)).append("\n");
-        sb.append("- Realisateur : ").append(realisateur).append("\n");
-        sb.append("- Acteurs : ").append(acteurs.toString()).append("\n");
-        sb.append("- Avis : ").append(avis.toString()).append("\n");
-        sb.append("- Genre : ").append(genre).append("\n");
+        final StringBuffer sb = new StringBuffer("🎬 Film(").append(id).append(")").append("\n");
+        sb.append("- 📌 Titre : ").append(titre).append("\n");
+        sb.append("- 📖 Synopsis : ").append(synopsis).append("\n");
+        sb.append("- 📅 Annee : ").append(annee).append("\n");
+        sb.append("- ⏱ Duree : ").append(convertMinutesToHoursAndMinutes(duree)).append("\n");
+        sb.append("- 🎥 Realisateur : ").append(realisateur).append("\n");
+        sb.append("- 🌟 Acteurs : ").append(acteurs.toString()).append("\n");
+        sb.append("- 📝 Avis : ").append(avis.toString()).append("\n");
+        sb.append("- 🎭 Genre : ").append(genre).append("\n");
         return sb.toString();
     }
 

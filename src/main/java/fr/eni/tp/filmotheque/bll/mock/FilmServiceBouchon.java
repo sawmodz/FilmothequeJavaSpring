@@ -22,7 +22,7 @@ public class FilmServiceBouchon implements FilmService {
 	private static int indexFilms = 1;
 
 	// Représente la table en base de données des genres des films
-	private static final String[] genres = { "Animation", "Science-fiction", "Documentaire", "Action", "Comédie",
+	private static final String[]  genres = { "Animation", "Science-fiction", "Documentaire", "Action", "Comédie",
 			"Drame" };
 
 	public FilmServiceBouchon() {
@@ -139,6 +139,9 @@ public class FilmServiceBouchon implements FilmService {
 		// Création d'un membre et un avis
 		Membre membre1 = new Membre(1, "Baille", "Anne-Lise", "abaille@campus-eni.fr", null);
 		Avis avis = new Avis(1, 4, "On rit du début à la fin", membre1);
+		Membre membre2 = new Membre(1, "bipbip", "Anonymous", "abaille@campus-eni.fr", null);
+		Avis avis2 = new Avis(2, 1, "\uD83D\uDCA9 Ce film pue vraiment le caca ⚰\uFE0F", membre2);
 		bienvenueChezLesChtis.getAvis().add(avis);
+		bienvenueChezLesChtis.getAvis().add(avis2);
 	}
 }
