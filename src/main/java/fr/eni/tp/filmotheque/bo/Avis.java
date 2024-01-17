@@ -52,10 +52,10 @@ public class Avis {
 
     @Override
     public String toString() {
-        return "Avis{" +
-                "note=" + note +
-                ", commentaire='" + commentaire + '\'' +
-                ", membre=" + membre +
-                '}';
+        final StringBuffer sb = new StringBuffer("Avis : \n");
+        sb.append("  - Note : ").append(note).append("\n");
+        sb.append("  - Commentaire : ").append(commentaire).append("\n");
+        sb.append("  - Membre : ").append(membre).append("\n");
+        return sb.toString();
     }
 }

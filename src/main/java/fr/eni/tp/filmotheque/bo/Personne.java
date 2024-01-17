@@ -40,7 +40,7 @@ public abstract class Personne {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer(nom).append(" ").append(prenom);
+        final StringBuffer sb = new StringBuffer(prenom).append(" ").append(nom);
         return sb.toString();
     }
 }
