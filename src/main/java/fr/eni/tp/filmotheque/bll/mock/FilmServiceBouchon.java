@@ -143,7 +143,9 @@ public class FilmServiceBouchon implements FilmService {
 		Avis avis = new Avis(1, 4, "On rit du début à la fin", membre1);
 		Membre membre2 = new Membre(1, "bipbip", "Anonymous", "abaille@campus-eni.fr", null);
 		Avis avis2 = new Avis(2, 1, "\uD83D\uDCA9 Ce film pue vraiment le caca ⚰\uFE0F", membre2);
+		Avis avis3 = new Avis(3, 5, "Ce film est juste incroyable !", membre1);
 		bienvenueChezLesChtis.getAvis().add(avis);
 		bienvenueChezLesChtis.getAvis().add(avis2);
+		theBFG.getAvis().add(avis3);
 	}
 }
