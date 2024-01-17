@@ -96,7 +96,7 @@ public class Film {
         if(this.acteurs.contains(this.realisateur)) sb.append(" (Aussi acteur)");
         sb.append("\n");
         sb.append("- 🌟 Acteurs : ").append(acteurs.toString()).append("\n");
-        sb.append("- 📝 Avis : ").append(avis.toString()).append("\n");
+        sb.append("- 📝 Avis : ").append(getNoteByStar(getAverageNote(avis))).append(avis.toString()).append("\n");
         sb.append("- 🎭 Genre : ").append(genre).append("\n");
         return sb.toString();
     }
@@ -105,6 +105,25 @@ public class Film {
         int hours = minutes / 60;
         int remainingMinutes = minutes % 60;
         return hours + "h " + remainingMinutes + "m";
+    }
+
+    private double getAverageNote(ArrayList<Avis> listAvis){
+        double total = 0.0;
+        for (Avis avis : listAvis) {
+            total += avis.getNote();
+        }
+
+        return total / listAvis.size();
+    }
+
+    private String getNoteByStar(double note){
+        int round = (int) note;
+
+        StringBuilder result = new StringBuilder();
+
+        result.append("⭐".repeat(Math.max(0, round)));
+
+        return result.toString();
     }
 }
 
