@@ -14,7 +14,7 @@ public class FimothequeApplication {
         FilmController controller = context.getBean(FilmController.class);
 
         // Affichage du film d'identiant 1
-        System.out.println("\nLe film d'identiant 1 est : ");
+        System.out.println("\nLe film d'identiant 1 est ");
         controller.afficherUnFilm(1);
 
 
